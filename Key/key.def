@@ -1,0 +1,8 @@
+LIBRARY  KEY
+EXPORTS  
+SetHook		 @2
+UnHook		@5
+CatchScreen			@6
+
+SEGMENTS
+MouseDate READ WRITE SHARED

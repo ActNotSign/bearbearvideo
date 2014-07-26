@@ -1,0 +1,462 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BearBearVideo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 BearBearVideo"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "BearBearVideo 1.0 版",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_BEARBEARVIDEO_DIALOG DIALOGEX 0, 0, 293, 217
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BearBearVideo"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "开始(F2)",IDOK,7,189,47,22
+    PUSHBUTTON      "暂停(F3)",IDC_STOP,61,189,47,22
+    PUSHBUTTON      "完成(F4)",IDC_OK,115,189,47,22
+    CONTROL         "",IDC_EXPLORER,"{8856F961-340A-11D0-A96B-00C04FD705A2}",
+                    WS_TABSTOP,1,118,288,68
+END
+
+IDD_TAB DIALOG DISCARDABLE  0, 0, 244, 20
+STYLE WS_CHILD
+FONT 10, "宋体"
+BEGIN
+    PUSHBUTTON      "设置",IDC_SET,2,0,38,18
+    PUSHBUTTON      "辅助软件",IDC_SOFT,152,0,38,18
+    PUSHBUTTON      "定时器",IDC_TIMERS,115,0,38,18
+    PUSHBUTTON      "关于熊熊软件",IDC_AD,189,0,55,18
+    PUSHBUTTON      "录制目标",IDC_LZ,40,0,38,18
+    PUSHBUTTON      "声音",IDC_WAVE,77,0,38,18
+END
+
+IDD_OLE_PROPPAGE_SET DIALOG DISCARDABLE  0, 0, 289, 96
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "文件名:",IDC_STATIC,2,7,28,12
+    EDITTEXT        IDC_FILENAMEE,31,4,48,14,ES_AUTOHSCROLL
+    LTEXT           "剩余空间:",IDC_STATIC,3,25,37,12
+    LTEXT           "",IDC_STATIC_SPACE,45,23,31,12
+    CONTROL         "同时录制声音",IDC_CHECK_WAVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,41,65,11
+    CONTROL         "同时录制光标",IDC_CHECK_MOUSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,56,65,11
+    CONTROL         "同时录制视频",IDC_CHECK_VIDEO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,71,59,11
+    LTEXT           "储存文件夹:",IDC_STATIC,83,8,46,11
+    EDITTEXT        IDC_FILEPATHE,129,4,112,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "保存到...",IDC_SELETE,243,3,43,15
+    GROUPBOX        "录制设置",IDC_STATIC,78,25,206,64
+    EDITTEXT        IDC_AVITIME,85,43,33,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "帧/秒(不要超过30)",IDC_STATIC,121,46,71,11
+    CONTROL         "录制生成",IDC_CHECK_MAKE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,199,45,44,11
+    CONTROL         "AVI",IDC_SUERAVI_AVI,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,211,59,28,10
+END
+
+IDD_OLE_PROPPAGE_MB DIALOG DISCARDABLE  0, 0, 287, 96
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "全屏录制",IDC_RADIO_FULL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,11,17,54,8
+    CONTROL         "窗口录制",IDC_RADIO_WIN,"Button",BS_AUTORADIOBUTTON,11,
+                    32,48,11
+    CONTROL         "摄像头录制",IDC_RADIO_VIDEO,"Button",BS_AUTORADIOBUTTON,
+                    11,50,56,12
+    PUSHBUTTON      "设置",IDC_SET,11,67,33,14
+    PUSHBUTTON      "预览",IDC_LOOK,47,67,33,14
+    CONTROL         "录像时显示本程序",IDC_RADIO_SHOW,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,145,21,79,10
+    CONTROL         "录像时隐藏本程序",IDC_RADIO_HIDE,"Button",
+                    BS_AUTORADIOBUTTON,145,43,80,10
+    CONTROL         "录像时本程序最小化",IDC_RADIO_MIN,"Button",
+                    BS_AUTORADIOBUTTON,145,65,87,10
+    GROUPBOX        "录制对象",IDC_STATIC,3,1,120,91
+    GROUPBOX        "录制对象",IDC_STATIC,127,1,153,91
+    LTEXT           "未选择窗口",IDC_STATIC_C,65,33,42,9
+END
+
+IDD_OLE_PROPPAGE_WAVA DIALOG DISCARDABLE  0, 0, 287, 96
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "采样位数",IDC_STATIC,4,4,65,86
+    GROUPBOX        "采样频率",IDC_STATIC,73,4,65,86
+    CONTROL         "8",IDC_WEISHU_8,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    13,27,20,9
+    CONTROL         "16",IDC_WEISHU_16,"Button",BS_AUTORADIOBUTTON,13,59,21,
+                    9
+    CONTROL         "8000",IDC_CI_8000,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,77,22,33,13
+    CONTROL         "11025",IDC_CI_11025,"Button",BS_AUTORADIOBUTTON,77,37,
+                    34,13
+    CONTROL         "22050",IDC_CI_22050,"Button",BS_AUTORADIOBUTTON,77,52,
+                    33,13
+    CONTROL         "44100",IDC_CI_44100,"Button",BS_AUTORADIOBUTTON,77,67,
+                    53,13
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,171,37,82,13
+    GROUPBOX        "声音控制",IDC_STATIC,143,4,141,86
+    LTEXT           "位",IDC_STATIC,36,33,11,10
+    LTEXT           "位",IDC_STATIC,35,59,19,10
+    LTEXT           "次/秒",IDC_STATIC,111,23,22,10
+    LTEXT           "次/秒",IDC_STATIC,112,38,22,10
+    LTEXT           "次/秒",IDC_STATIC,111,53,22,10
+    LTEXT           "次/秒",IDC_STATIC,111,67,22,10
+    LTEXT           "右声道",IDC_STATIC,256,40,25,10
+    LTEXT           "左声道",IDC_STATIC,147,40,24,10
+END
+
+IDD_OLE_PROPPAGE_TIMER DIALOG DISCARDABLE  0, 0, 289, 96
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TIMERS,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    WS_TABSTOP | 0x8,137,24,62,14
+    CONTROL         "DateTimePicker2",IDC_DATETIMEPICKER_YEARS,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | 
+                    WS_TABSTOP,53,24,77,14
+    LTEXT           "开始时间",IDC_STATIC,9,26,32,10
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER_TIMERSTOP,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | 
+                    WS_TABSTOP | 0x8,137,56,62,14
+    CONTROL         "DateTimePicker2",IDC_DATETIMEPICKER_YEARSTOP,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_LONGDATEFORMAT | 
+                    WS_TABSTOP,53,56,77,14
+    LTEXT           "结束时间",IDC_STATIC,9,58,32,10
+    GROUPBOX        "定时设置",IDC_STATIC,3,5,204,84
+    GROUPBOX        "定时",IDC_STATIC,209,5,74,84
+    PUSHBUTTON      "定时开始",IDC_TIMER_STATR,220,23,51,16
+    PUSHBUTTON      "取消定时",IDC_TIMER_STOP,220,53,51,16
+END
+
+IDD_SWINDOW DIALOGEX 0, 0, 91, 39
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 9, "宋体"
+BEGIN
+END
+
+IDD_DIALOG_SPY DIALOG DISCARDABLE  0, 0, 233, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Spy"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "确定",IDCANCEL,186,26,41,16
+    LTEXT           "选择窗口:",IDC_STATIC,13,20,41,11
+    LTEXT           "句柄:",IDC_STATIC,14,59,21,10
+    LTEXT           "标题:",IDC_STATIC,14,77,22,10
+    LTEXT           "类名:",IDC_STATIC,14,95,22,10
+    LTEXT           "矩形:",IDC_STATIC,14,113,22,10
+    GROUPBOX        "窗体信息",IDC_STATIC,4,44,223,87
+    CONTROL         "隐藏主窗体",IDC_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,11,54,9
+    LTEXT           "",IDC_STATIC_HANDLE,41,59,141,13
+    LTEXT           "",IDC_STATIC_CAP,41,77,143,13
+    LTEXT           "",IDC_STATIC_CLASSNAME,41,93,144,13
+    LTEXT           "",IDC_STATIC_RECT,41,111,144,13
+    CONTROL         "切图并保存",IDC_SAVEPIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,130,33,54,9
+END
+
+IDD_DIALOG_ViDEOSHOW DIALOG DISCARDABLE  0, 0, 212, 171
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Dialog"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_PANEL,"Static",SS_BLACKFRAME,3,5,204,160
+END
+
+IDD_OLE_PROPPAGE_SOFT DIALOG DISCARDABLE  0, 0, 288, 96
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "软件",IDC_STATIC,6,4,277,88
+    PUSHBUTTON      "Spy++",IDC_SPY,11,13,59,16
+END
+
+IDD_OLE_PROPPAGE_SMALL DIALOG DISCARDABLE  0, 0, 286, 96
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         172,IDC_STATIC,"Static",SS_BITMAP,7,10,61,81
+    GROUPBOX        "作者简介",IDC_STATIC,3,1,142,92
+    LTEXT           "年龄：18",IDC_STATIC,71,27,56,12
+    LTEXT           "学历：高中",IDC_STATIC,71,40,56,12
+    LTEXT           "年龄：小新",IDC_STATIC,71,14,56,12
+    LTEXT           "毕业学校：华强中学",IDC_STATIC,71,53,72,12
+    LTEXT           "QQ:",IDC_STATIC,71,66,14,12
+    LTEXT           "403275198",IDC_QQ,89,66,52,9,SS_NOTIFY
+    GROUPBOX        "软件介绍",IDC_STATIC,149,1,130,92
+    LTEXT           "次软件是作者高3毕业无聊制作。\n用于录制视频桌面教程用。\n本软件第一版对声音的处理有些不足如果大家喜欢此款软件本人将在第二版中更新声音部分。\n\n谢谢大家的支持.",
+                    IDC_STATIC,155,18,121,56
+    LTEXT           "BearBearSoft\n    2009.8.5",IDC_STATIC,225,75,51,16
+END
+
+IDD_OLE_PROPPAGE_HIDE DIALOG DISCARDABLE  0, 0, 44, 33
+STYLE WS_POPUP
+FONT 9, "宋体"
+BEGIN
+    CONTROL         175,IDC_STATIC,"Static",SS_BITMAP,0,0,44,34
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "BearBearVideo 熊熊软件0.1\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "BearBearVideo\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "BearBearVideo.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "BearBearVideo 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_OLE_PROPPAGE_MB, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 92
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FARAM               BITMAP  DISCARDABLE     "res\\bk.bmp"
+IDB_BUTTON              BITMAP  DISCARDABLE     "res\\Common.bmp"
+IDB_PRESSBUTTON1        BITMAP  DISCARDABLE     "res\\button.bmp"
+IDB_TOOLDEL             BITMAP  DISCARDABLE     "res\\del.bmp"
+IDB_TOOLSTOP            BITMAP  DISCARDABLE     "res\\pause.bmp"
+IDB_TOOLSTART           BITMAP  DISCARDABLE     "res\\start.bmp"
+IDB_TOOLOPEN            BITMAP  DISCARDABLE     "res\\open.bmp"
+IDB_PRESSBUTTON2        BITMAP  DISCARDABLE     "res\\resrc_btn.bmp"
+IDB_TABBUTTON           BITMAP  DISCARDABLE     "res\\TabButton.bmp"
+IDB_BK                  BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BUT_N               BITMAP  DISCARDABLE     "res\\tabunsel.bmp"
+IDB_BUT_S               BITMAP  DISCARDABLE     "res\\btn_select.bmp"
+IDB_BUT_D               BITMAP  DISCARDABLE     "res\\BG_MENU_HILIGHT.bmp"
+IDB_PUSH_BUTTON_HOVER   BITMAP  DISCARDABLE     "res\\IDB_PUSH_BUTTON_HOVER.bmp"
+IDB_PUSH_BUTTON_NORMAL  BITMAP  DISCARDABLE     "res\\IDB_PUSH_BUTTON_NORMAL.bmp"
+IDB_ME                  BITMAP  DISCARDABLE     "res\\未命名.bmp"
+IDB_HDBK                BITMAP  DISCARDABLE     "res\\bg.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Home-Movie.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\9.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\8.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\icon3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR              CURSOR  DISCARDABLE     "res\\10.cur"
+IDC_HAND                CURSOR  DISCARDABLE     "res\\Hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "保存"
+    BEGIN
+        MENUITEM "保存图片",                    ID_MENUITEM32777
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_BEARBEARVIDEO_DIALOG DLGINIT
+BEGIN
+    IDC_EXPLORER, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x2ca6, 0x0000, 0x0a8b, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 BearBearVideo(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\BearBearVideo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

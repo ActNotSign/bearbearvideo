@@ -1,0 +1,9 @@
+		AVICOMPRESSOPTIONS opts;
+		opts.fccHandler   =   0x6376736d;   
+		opts.dwQuality   =   10000;     //100%   quality,   9000   would   be   90%,   etc.   
+		opts.dwFlags   =   8;   
+		opts.lpParms   =   (LPVOID   *)GlobalAlloc(NULL,   4);   
+		opts.cbParms   =   4;   
+		*((long*)opts.lpParms)   =   75;   
+
+		AVIMakeCompressedStream(&psCompressed,   ps,   &opts,   NULL);   

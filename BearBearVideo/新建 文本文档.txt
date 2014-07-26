@@ -1,0 +1,33 @@
+  bool   CAVIFile::AddFrame(char   *BmpFileName)   
+  {   
+  CFile BmpFile;   
+  DWORD dwImgSizes;   
+  BmpFile.Open(BmpFileName,CFile::modeRead|CFile::typeBinary);   
+  BmpFile.Seek(14,CFile::begin);//sizeof(BITMAPFILEHEADER)=14;   
+  BmpFile.Read(&bi,40);//sizeof(BITMAPINFOHEADER)=40;   
+  dwImgSizes=(DWORD)WIDTHBYTES(bi.biWidth*bi.biBitCount)*bi.biHeight;   
+  bi.biSizeImage=dwImgSizes;   
+  BmpFile.ReadHuge(pData,dwImgSizes);   
+  BmpFile.Close();   
+  if(nFrames==0)   
+  {   
+  pData=(BYTE*)new BYTE[dwImgSizes];//如果是第一次写就分配内存   
+  hr=AVIFileOpen(&pfile,FName,OF_WRITE|OF_CREATE,NULL); //   use   handler   determined   
+  _fmemset(&strhdr,0,sizeof(strhdr));   
+  strhdr.fccType=streamtypeVIDEO;//   stream   type   
+  strhdr.fccHandler=0;   
+  strhdr.dwScale=1;   
+  strhdr.dwRate=15;         //   15   fps   
+  strhdr.dwSuggestedBufferSize=bi.biSizeImage;   
+  SetRect(&strhdr.rcFrame,0,0,(int)bi.biWidth,bi.biHeight);   
+  //   And   create   the   stream;   
+  AVIFileCreateStream(pfile,&ps,&strhdr);   
+  _fmemset(&opts,   0,   sizeof(opts));   
+  AVISaveOptions(NULL,0,1,&ps,(LPAVICOMPRESSOPTIONS   FAR   *)&aopts);   
+  AVIMakeCompressedStream(&psCompressed,   ps,   &opts,   NULL);   
+  AVIStreamSetFormat(psCompressed,0,&bi,bi.biSize+bi.biClrUsed   *   sizeof(RGBQUAD));   
+  }   
+  hr=AVIStreamWrite(psCompressed,nFrames*10,1,pData,bi.biSizeImage,AVIIF_KEYFRAME,NULL,NULL);   
+  nFrames++;   
+  return   true;   
+  } 

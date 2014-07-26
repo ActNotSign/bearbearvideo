@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\BearBearVideo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\BearBearVideo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\BearBearVideo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\BearBearVideo.exe</OutputFile>
+      <AdditionalDependencies>Vfw32.lib;msimg32.lib;Winmm.lib;Key.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\BearBearVideo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\BearBearVideo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\BearBearVideo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\BearBearVideo.exe</OutputFile>
+      <AdditionalDependencies>Vfw32.lib;msimg32.lib;Winmm.lib;Key.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AD.cpp" />
+    <ClCompile Include="BearBearVideo.cpp" />
+    <ClCompile Include="BearBearVideoDlg.cpp" />
+    <ClCompile Include="timerdialog\beautifulcanlendarmonthcombo.cpp" />
+    <ClCompile Include="timerdialog\beautifulcanlendaryearcombox.cpp" />
+    <ClCompile Include="timerdialog\BeautifulDateTimePicker.cpp" />
+    <ClCompile Include="timerdialog\Calendar.cpp" />
+    <ClCompile Include="DarwDialog.cpp" />
+    <ClCompile Include="DrawButton.cpp" />
+    <ClCompile Include="DrawEdit.cpp" />
+    <ClCompile Include="DrawListCtrl.cpp" />
+    <ClCompile Include="DrawTab.cpp" />
+    <ClCompile Include="DrawToolBar.cpp" />
+    <ClCompile Include="HideDialog.cpp" />
+    <ClCompile Include="MakeVideo.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="NewButton.cpp" />
+    <ClCompile Include="Set.cpp" />
+    <ClCompile Include="SetLZ.cpp" />
+    <ClCompile Include="SetTimer.cpp" />
+    <ClCompile Include="SetWave.cpp" />
+    <ClCompile Include="ShowWindow.cpp" />
+    <ClCompile Include="Soft.cpp" />
+    <ClCompile Include="Spy.cpp" />
+    <ClCompile Include="StaticHttp.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="VideoEncodeDlg.cpp" />
+    <ClCompile Include="VideoShow.cpp" />
+    <ClCompile Include="webbrowser.cpp" />
+    <ClCompile Include="timerdialog\XPGroupBox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BearBearVideo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AD.h" />
+    <ClInclude Include="BearBearVideo.h" />
+    <ClInclude Include="BearBearVideoDlg.h" />
+    <ClInclude Include="timerdialog\beautifulcanlendarmonthcombo.h" />
+    <ClInclude Include="timerdialog\beautifulcanlendaryearcombox.h" />
+    <ClInclude Include="timerdialog\BeautifulDateTimePicker.h" />
+    <ClInclude Include="timerdialog\Calendar.h" />
+    <ClInclude Include="DarwDialog.h" />
+    <ClInclude Include="DrawButton.h" />
+    <ClInclude Include="DrawEdit.h" />
+    <ClInclude Include="DrawListCtrl.h" />
+    <ClInclude Include="DrawTab.h" />
+    <ClInclude Include="DrawToolBar.h" />
+    <ClInclude Include="HideDialog.h" />
+    <ClInclude Include="MakeVideo.h" />
+    <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="NewButton.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Set.h" />
+    <ClInclude Include="SetLZ.h" />
+    <ClInclude Include="SetTimer.h" />
+    <ClInclude Include="SetWave.h" />
+    <ClInclude Include="ShowWindow.h" />
+    <ClInclude Include="Soft.h" />
+    <ClInclude Include="Spy.h" />
+    <ClInclude Include="StaticHttp.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="VideoEncodeDlg.h" />
+    <ClInclude Include="VideoShow.h" />
+    <ClInclude Include="webbrowser.h" />
+    <ClInclude Include="WriteAVI.h" />
+    <ClInclude Include="timerdialog\XPGroupBox.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\10.cur" />
+    <CustomBuild Include="res\8.ico" />
+    <CustomBuild Include="res\9.ico" />
+    <CustomBuild Include="res\BearBearVideo.ico" />
+    <CustomBuild Include="res\BearBearVideo.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\bg.bmp" />
+    <CustomBuild Include="res\BG_MENU_HILIGHT.bmp" />
+    <CustomBuild Include="res\bitmap1.bmp" />
+    <CustomBuild Include="res\bk.bmp" />
+    <CustomBuild Include="res\BondiBlue.ico" />
+    <CustomBuild Include="res\btn_select.bmp" />
+    <CustomBuild Include="res\button.bmp" />
+    <CustomBuild Include="res\Common.bmp" />
+    <CustomBuild Include="res\del.bmp" />
+    <CustomBuild Include="res\Hand.cur" />
+    <CustomBuild Include="res\Home-Movie.ico" />
+    <CustomBuild Include="res\icon3.ico" />
+    <CustomBuild Include="res\IDB_PUSH_BUTTON_HOVER.bmp" />
+    <CustomBuild Include="res\IDB_PUSH_BUTTON_NORMAL.bmp" />
+    <CustomBuild Include="res\open.bmp" />
+    <CustomBuild Include="res\pause.bmp" />
+    <CustomBuild Include="res\QuickCamExpress.ico" />
+    <CustomBuild Include="res\resrc_btn.bmp" />
+    <CustomBuild Include="res\start.bmp" />
+    <CustomBuild Include="res\TabButton.bmp" />
+    <CustomBuild Include="res\tabunsel.bmp" />
+    <CustomBuild Include="res\toolbar1.bmp" />
+    <CustomBuild Include="res\未命名.bmp" />
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
